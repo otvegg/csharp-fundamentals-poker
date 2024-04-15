@@ -43,3 +43,24 @@ Requirements:
 - Write some code in `Program.cs` to run a full simulation of a round of Poker which involves resetting a deck, clearing the player's hands; dealing 2 cards to each player + 3 cards on the table; then dealing 2 more cards onto the table and finally computing the winner of that round. Your code should clearly print out messages about each stage and display the player's hands, the tables cards and the winner.
   
 This is open ended, there are many ways to implement this.
+
+## Hint for ungraded extension
+
+It's enough to get to this output:
+
+```
+Table cards:
+8 of Diamonds
+9 of Spades
+10 of Hearts
+4 of Diamonds
+Q of Hearts
+Player 1 has:
+8 of Clubs
+9 of Hearts
+Player 2 has:
+Q of Clubs
+A of Clubs
+```
+
+Anything more than this, such as computing who won, is actually a really complex task that will take a lot of time for you to solve. You can solve this problem over the coming days for fun if you finish all other exercises.
