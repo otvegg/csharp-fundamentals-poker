@@ -32,14 +32,20 @@ namespace exercise.main
             int BiggestPair = 0;
             foreach (var pair in hands)
             {
-                //string[] cards = pair.ToString().Trim('(').Trim(')').Split(",");
-                if (pair.Item1 == pair.Item2 && pair.Item1 != null)
+                bool isSimilar = true;
+                string[] cards = pair.ToString().Trim('(').Trim(')').Split(",").Select(card=>card.Trim()).ToArray();
+                for (int j = 0; j < cards.Count(); j++)
+                {
+                    if (cards[0] != cards[j]) isSimilar = false;
+                }
+
+                if (isSimilar)
                 {
                     int i = 0;
                     bool isInt = int.TryParse(pair.Item1, out i);
-                    if (isInt) 
-                    { 
-                        if (BiggestPair < i) BiggestPair = i; 
+                    if (isInt)
+                    {
+                        if (BiggestPair < i) BiggestPair = i;
                     }
                     else
                     {
@@ -47,6 +53,7 @@ namespace exercise.main
                         if (BiggestPair < Cards[temporaryCard]) BiggestPair = Cards[temporaryCard];
                     }
                 }
+                
             }
 
             string BiggestCard = String.Empty;
